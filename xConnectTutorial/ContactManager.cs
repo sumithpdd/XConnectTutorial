@@ -40,13 +40,12 @@ namespace Sitecore.TechnicalMarketing.xConnectTutorial
 
 
                     //Add personal information
-                    var personalInfoFacet = new PersonalInformation() { FirstName = "Myrtle", LastName = "McSitecore", JobTitle = "Programmer Writer", Birthdate = DateTime.Now.Date };
+                    var personalInfoFacet = new PersonalInformation() { FirstName = "Sumith", LastName = "Damodaran", JobTitle = "Programmer Writer", Birthdate = DateTime.Now.Date };
                     //Set the personal info on the contact
                     client.SetFacet<PersonalInformation>(knownContact, PersonalInformation.DefaultFacetKey, personalInfoFacet);
 
                     //Add to the client
-                    client.AddContact(knownContact);
-
+                    client.AddContact(knownContact); 
                     // Submit contact
                     await client.SubmitAsync();
 
